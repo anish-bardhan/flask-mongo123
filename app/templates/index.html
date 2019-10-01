@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Community Events Board</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <div class="event-list">
+        <ul>
+          {% for event in queries %}
+            <li> Event: {{ event.name }} <br> Date: {{ event.date }} <br> Attending: {{ event.attending }} </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <form method= "POST" action="/input">
+        <input type="submit" value="Add Event">
+      </form>
+
+    </body>
+</html>
